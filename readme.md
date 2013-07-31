@@ -1,4 +1,4 @@
-## StudentEvals
+### StudentEvals
 
 Student evals is a platform that allows teachers to evaluate students based on a number of metrics.
 Each student has a record with a unique identifier (in most cases, a student number). 

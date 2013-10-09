@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>HardHat Hire</title>
+        <title>Teach</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
@@ -23,7 +23,7 @@
     <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-           <a class="brand" href="../">Hard Hat Hire</a>
+           <a class="brand" href="../">Teach</a>
            <div class="nav-collapse collapse" id="main-menu">
             <ul class="nav" id="main-menu-left">
               <li><a href="{{ URL::to('jobs') }}">Jobs</a></li>
@@ -46,13 +46,5 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
         <script src="{{ URL::asset('js/plugins.js') }}"></script>
         <script src="{{ URL::asset('js/main.js') }}"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='//www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
     </body>
 </html>

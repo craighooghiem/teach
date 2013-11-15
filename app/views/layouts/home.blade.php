@@ -1,50 +1,55 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Teach</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <meta name="viewport" content="width=device-width" />
 
-        <link rel="stylesheet" href="{{ URL::asset('css/normalize.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('css/fonts.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.css') }}">
-        <script src="{{ URL::asset('js/vendor/modernizr-2.6.2.min.js') }}"></script>
-    </head>
-    <body>
+  <title>Welcome to Parliament | Homepage</title>
 
-    <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-           <a class="brand" href="../">Teach</a>
-           <div class="nav-collapse collapse" id="main-menu">
-            <ul class="nav" id="main-menu-left">
-              <li><a href="{{ URL::to('jobs') }}">Jobs</a></li>
-              <li><a href="{{ URL::to('profile') }}">Profile</a></li>
-            </ul>
-           </div>
-        </div>
-    </div>
+  {{ Asset::styles() }}
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js" type="text/javascript"></script>
+  
+</head>
+
+<body>
+  <div class="row">
+    <div class="large-12 columns">
+
     </div>
 
-        <div id="wrapper">
-            @if(Session::has('flash_notice'))
-                <div id="flash_notice">{{ Session::get('flash_notice') }}</div>
-            @endif
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="row">
 
-            @yield('content')
+          @if(Session::has('flash_notice'))
+              <div id="flash_notice" class="alert-box">{{ Session::get('flash_notice') }}</div>
+          @endif
+
+          @yield('content')
+
         </div>
+      </div>
+    </div>
+  </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-        <script src="{{ URL::asset('js/plugins.js') }}"></script>
-        <script src="{{ URL::asset('js/main.js') }}"></script>
-    </body>
+  <div class="footer row">
+    <div class="large-12 columns">
+      <div class="row">
+        @yield('footer')
+      </div>
+    </div>
+  </div>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+  {{ Asset::scripts() }}
+
+  <script>
+  $(document).ready(function(){
+      $(document).foundation('forms');
+  });
+  </script>
+
+</body>
 </html>

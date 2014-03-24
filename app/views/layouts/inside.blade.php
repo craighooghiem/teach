@@ -3,79 +3,38 @@
 <head>
   <meta charset="utf-8" />
 
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=960px" />
 
-  <title>Welcome to Parliament | Manage</title>
+  <title>Welcome to Parliament | Homepage</title>
 
   {{ Asset::styles() }}
-
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js" type="text/javascript"></script>
   
 </head>
 
 <body>
-	<div class="row">
-	  <div class="large-12 columns">
 
-    <!-- Navigation -->
+  <div class="large-12 columns">
 
-      <div class="nav top-bar">
-        <ul class="title-area">
-          <!-- Title Area -->
-          <li class="name">
-            <h1>
-              <a href="#">
-                Top Bar Title
-              </a>
-            </h1>
-          </li>
-          <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
-        </ul>
-
-        <div class="top-bar-section">
-          <ul class="left">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-          </ul>
-
-          <ul class="right">
-            <li class="search">
-              <form>
-                <input type="search">
-              </form>
-            </li>
-
-            <li class="has-button">
-              <a class="small button" href="#">Search</a>
-            </li>
-          </ul>
-        </div>
-    </div>
-
-    <!-- End Navigation -->
-
-    </div>
   </div>
 
-  <div class="row">
+  <div style="width: 100%">
     <div class="large-12 columns">
-      <div class="row">
 
-		@if(Session::has('flash_notice'))
-		  <div id="flash_notice">{{ Session::get('flash_notice') }}</div>
-		@endif
+      @if(Session::has('flash_notice'))
+          <div id="flash_notice" class="alert-box">{{ Session::get('flash_notice') }}</div>
+      @endif
 
-		@yield('content')
+      @yield('content')
 
-      </div>
     </div>
   </div>
 
   <div class="footer row">
     <div class="large-12 columns">
-      <hr>
       <div class="row">
-        <p style="text-align: center;">Footer Here</p>
+        @yield('footer')
       </div>
     </div>
   </div>
@@ -83,7 +42,9 @@
   {{ Asset::scripts() }}
 
   <script>
-    $(document).foundation();
+  $(document).ready(function(){
+      $(document).foundation('forms');
+  });
   </script>
 
 </body>

@@ -10,4 +10,9 @@ class Student extends Eloquent {
 		return $this->belongsTo('Classroom');
 	}
 
+	public function subjects()
+	{
+		return $this->belongsToMany('Subject');
+	}
+
 }

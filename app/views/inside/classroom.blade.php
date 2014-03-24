@@ -11,9 +11,10 @@
 		<hr />
 
 		<div class="row">
+			<h3>Students</h3>
 		@foreach($students as $student)
 			<div class="large-2 columns th panel left iconbox">
-				<a href="{{ URL::to('classroom/'.$classroom->id) }}" title="Classroom - {{ $classroom->id }}">
+				<a href="{{ URL::to('classroom/student/'.$classroom->id) }}" title="Classroom - {{ $classroom->id }}">
 					<img src="https://cdn1.iconfinder.com/data/icons/zoomeyed/devid.png" class="center" />
 					<p class="center">
 						{{ $student->fname }} {{ $student->lname }}

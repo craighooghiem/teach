@@ -16,6 +16,13 @@ strong h3 {
 	font-size: 1.4em;
 }
 
+h3 {
+	text-align: center;
+	padding: 10px 0;
+	border-top: 1px solid #BFBDBB;
+	border-bottom: 1px solid #BFBDBB;
+}
+
 h4 {
 	text-align: center;
 	padding-bottom: 0; margin-bottom: 0;
@@ -29,4 +36,80 @@ h4 {
 
 .iconbox {
 	margin-left: 14px;
+}
+
+/** Inside Page Styles **/
+.sidebar {
+	width: 25%;
+	position: fixed;
+	left: 0px;
+	height: 100%;
+	background: #ececec;
+	overflow: scroll;
+	border-right: 1px solid #BFBDBB;
+}
+
+.sidebar ul {
+	list-style: none;
+	padding: 0; margin: 0;
+}
+
+.sidebar ul li {
+	height: 30px;
+	padding: 20px !important;
+	list-style: none;
+	display: block;
+	position: relative;
+}
+
+.sidebar ul a {
+	display: block;
+	line-height: 0px;
+	padding-top: 10px; padding-bottom: 10px;
+	border-bottom: 1px solid #BFBDBB;
+}
+
+.sidebar ul a:hover {
+	background: #CCBEAF;
+}
+
+.sidebar ul a img {
+	margin: 0; padding: 0;
+	float: left;
+	display: block;
+	position: absolute;
+	top: 3px;
+	width: 30px;
+	margin-right: 20px;
+	line-height: 0px;
+	border: none;
+}
+
+.sidebar ul li span {
+	margin-left: 20%;
+}
+
+.sidebar ul a.active {
+	background: #DBCDBC;
+}
+
+.inside-page {
+	width: 75%;
+	position: relative;
+	float: right;
+}
+
+.observations {
+	padding: 20px;
+	border: 1px solid #ececec;
+	width: 100%;
+}
+
+.observations td {
+	padding: 15px;
+	cursor: pointer;
+}
+
+form label {
+	font-size: 110%;
 }

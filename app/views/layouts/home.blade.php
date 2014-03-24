@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=960px" />
 
   <title>Welcome to Parliament | Homepage</title>
 
